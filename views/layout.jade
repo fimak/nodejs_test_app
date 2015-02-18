@@ -1,0 +1,18 @@
+doctype
+head
+	title= page
+	meta(charset='utf-8')
+	link(rel='stylesheet' href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+	style
+		|ul.nav a {
+		|	text-transform: capitalize;
+		|}
+body
+	.container
+		h1= page
+		hr
+		ul.nav.nav-pills
+			each link in links
+				li: a(href=link)= link
+		hr
+		block content
